@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Closer</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <div class="grid-container">
+
+    <div class="grid-child one">
+      <div class="location">
+        <h1 class="location-timezone"></h1>
+        <h3 class="location-date"></h3>
+        <canvas id="icon1" width="128" height="128"></canvas>
+      </div>
+      <div class="temperature">
+        <div class="degree-section">
+          <h2 class="temperature-degree"></h2><span>C</span>
+        </div>
+
+        <div class="temperature-description"></div>
+      </div>
+    </div>
+
+    <div class="grid-child two">
+      <form>
+ <input type="text" id="country" size="20" name="country" placeholder="Country"><br><br>
+ <input type="text" id="city" size="20" name="city" placeholder="City"><br><br>
+  <button id="submit" type="button" name="button">Submit</button>
+</form>
+<div class="divTwo hidden">
+  <div class="locationTwo">
+    <h1 class="location-timezone-two"></h1>
+    <h3 class="location-date-two"></h3>
+    <canvas id="icon2" width="128" height="128"></canvas>
+  </div>
+  <div class="temperatureTwo">
+    <div class="degree-section-two">
+      <h2 class="temperature-degree-two"></h2><span>C</span>
+    </div>
+
+    <div class="temperature-description-two"></div>
+  </div>
+</div>
+
+
+    </div>
+
+  </div>
+
+  <script src="javascript/skycons.js" charset="utf-8"></script>
+  <script src="javascript/app.js" charset="utf-8"></script>
+</body>
+
+</html>
