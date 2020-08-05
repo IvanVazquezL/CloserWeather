@@ -1,6 +1,6 @@
 var key = '37727e9eb03e2a34aca1e1b3ae84c871';
 var city = document.querySelector(".location-timezone");
-var date = document.querySelector(".location-date");
+// var date = document.querySelector(".location-date");
 var temperature = document.querySelector(".temperature-degree");
 var description = document.querySelector(".temperature-description");
 var temperatureSection = document.querySelector(".degree-section");
@@ -285,22 +285,22 @@ window.addEventListener("load", () => {
           var countryOne = countries[data.sys.country];
           city.textContent = data.name+", "+countryOne;
 
-          //Date
-          var milliseconds = data.dt * 1000;
-          console.log(milliseconds);
-          var dateObject = new Date(milliseconds);
-
-          var hourPeriod = dateObject.toLocaleString("en-US", {hour: "numeric"}).split(" ");
-          console.log(hourPeriod);
-          var minute = dateObject.toLocaleString("en-US", {minute: "numeric"}) // 30
-          console.log(minute);
-          var dayName = dateObject.toLocaleString("en-US", {weekday: "long"}) // Monday
-          var month = dateObject.toLocaleString("en-US", {month: "long"}) // December
-          var dayNumber = dateObject.toLocaleString("en-US", {day: "numeric"}) // 9
-          var year = dateObject.toLocaleString("en-US", {year: "numeric"}) // 2019
-
-          date.textContent = hourPeriod[0]+":"+minute+hourPeriod[1]+", "+dayName+", "+month+" "+dayNumber+", "+year;
-          //end of date
+          // //Date
+          // var milliseconds = data.dt * 1000;
+          // console.log(data.dt);
+          // var dateObject = new Date(milliseconds);
+          //
+          // var hourPeriod = dateObject.toLocaleString("en-US", {hour: "numeric"}).split(" ");
+          // console.log(hourPeriod);
+          // var minute = dateObject.toLocaleString("en-US", {minute: "numeric"}) // 30
+          // console.log(minute);
+          // var dayName = dateObject.toLocaleString("en-US", {weekday: "long"}) // Monday
+          // var month = dateObject.toLocaleString("en-US", {month: "long"}) // December
+          // var dayNumber = dateObject.toLocaleString("en-US", {day: "numeric"}) // 9
+          // var year = dateObject.toLocaleString("en-US", {year: "numeric"}) // 2019
+          //
+          // date.textContent = hourPeriod[0]+":"+minute+hourPeriod[1]+", "+dayName+", "+month+" "+dayNumber+", "+year;
+          // //end of date
 
           temperature.textContent = celsius;
           description.textContent = data.weather[0].description;
@@ -411,27 +411,27 @@ submitButton.addEventListener("click", function() {
       var descriptionTwo = document.querySelector(".temperature-description-two");
       var temperatureSectionTwo = document.querySelector(".degree-section-two");
       var temperatureSpanTwo = document.querySelector(".degree-section-two span");
-      var dateTwo = document.querySelector(".location-date-two");
+      // var dateTwo = document.querySelector(".location-date-two");
 
       cityTitle.textContent = data.name+", "+country;
 
-      //Date
-      var millisecondsTwo = data.dt * 1000;
-      console.log(millisecondsTwo);
-      var dateObjectTwo = new Date(millisecondsTwo);
-      console.log(dateObjectTwo);
-
-      var hourPeriodTwo = dateObjectTwo.toLocaleString("en-US", {hour: "numeric"}).split(" ");
-      console.log(hourPeriodTwo);
-      var minuteTwo = dateObjectTwo.toLocaleString("en-US", {minute: "numeric"}) // 30
-      console.log(minuteTwo);
-      var dayNameTwo = dateObjectTwo.toLocaleString("en-US", {weekday: "long"}) // Monday
-      var monthTwo = dateObjectTwo.toLocaleString("en-US", {month: "long"}) // December
-      var dayNumberTwo = dateObjectTwo.toLocaleString("en-US", {day: "numeric"}) // 9
-      var yearTwo = dateObjectTwo.toLocaleString("en-US", {year: "numeric"}) // 2019
-
-      dateTwo.textContent = hourPeriodTwo[0]+":"+minuteTwo+hourPeriodTwo[1]+", "+dayNameTwo+", "+monthTwo+" "+dayNumberTwo+", "+yearTwo;
-      //end of date
+      // //Date
+      // var millisecondsTwo = data.dt * 1000;
+      // console.log(data.dt);
+      // var dateObjectTwo = new Date(data.dt * 1000);
+      // console.log(dateObjectTwo);
+      //
+      // var hourPeriodTwo = dateObjectTwo.toLocaleString("en-US", {hour: "numeric"}).split(" ");
+      // console.log(hourPeriodTwo);
+      // var minuteTwo = dateObjectTwo.toLocaleString("en-US", {minute: "numeric"}) // 30
+      // console.log(minuteTwo);
+      // var dayNameTwo = dateObjectTwo.toLocaleString("en-US", {weekday: "long"}) // Monday
+      // var monthTwo = dateObjectTwo.toLocaleString("en-US", {month: "long"}) // December
+      // var dayNumberTwo = dateObjectTwo.toLocaleString("en-US", {day: "numeric"}) // 9
+      // var yearTwo = dateObjectTwo.toLocaleString("en-US", {year: "numeric"}) // 2019
+      //
+      // dateTwo.textContent = hourPeriodTwo[0]+":"+minuteTwo+hourPeriodTwo[1]+", "+dayNameTwo+", "+monthTwo+" "+dayNumberTwo+", "+yearTwo;
+      // //end of date
 
       temperatureTwo.textContent = celsius;
       descriptionTwo.textContent = data.weather[0].description;
@@ -501,7 +501,6 @@ submitButton.addEventListener("click", function() {
           temperatureTwo.textContent = fahrenheit;
         }
       });
-
     })
     .catch(function() {
       // catch any errors
